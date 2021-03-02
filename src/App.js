@@ -42,7 +42,7 @@ function App() {
     <div className="container">
       <h1>CRUD App with Hooks</h1>
       <div className="flex-row">
-        <div className="flex-large">
+        <div className="section">
           {editing ? (
             <div>
               <h2>Edit user</h2>
@@ -59,7 +59,7 @@ function App() {
             </div>
           )}
         </div>
-        <div className="flex-large">
+        <div className="section">
           <h2>View users</h2>
           <UserTable users={users} deleteUser={deleteUser} editRow={editRow} />
         </div>
