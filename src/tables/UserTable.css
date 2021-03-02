@@ -18,30 +18,3 @@ td {
   text-align: left;
   padding: 0.5rem;
 }
-
-.muted-button {
-  display: inline-block;
-  border: 1px solid #cdcdcd;
-  border-radius: 4px;
-  background: transparent;
-  color: #4e4e4e;
-  font-weight: 600;
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
-    Arial, sans-serif;
-  font-size: 1rem;
-  text-transform: none;
-  padding: 0.75rem 1.25rem;
-  margin: 0 0.5rem 0 0;
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
-  line-height: 1;
-}
-
-.muted-button:hover,
-.muted-button:focus,
-.muted-button:active {
-  border: 1px solid #818181;
-  text-decoration: none;
-}

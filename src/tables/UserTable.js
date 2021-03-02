@@ -1,7 +1,7 @@
 import React from 'react';
 import './UserTable.css';
 
-const UserTable = () => (
+const UserTable = ({ users, deleteUser, editRow }) => (
   <table>
     <thead>
       <tr>
@@ -11,14 +11,28 @@ const UserTable = () => (
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Name data</td>
-        <td>Username data</td>
-        <td>
-          <button className="muted-button">Edit</button>
-          <button className="muted-button">Delete</button>
-        </td>
-      </tr>
+      {users.length > 0 ? (
+        users.map(user => (
+          <tr key={user.id}>
+            <td>{user.name}</td>
+            <td>{user.username}</td>
+            <td>
+              <button
+                onClick={() => {
+                  editRow(user);
+                }}
+              >
+                Edit
+              </button>
+              <button onClick={() => deleteUser(user.id)}>Delete</button>
+            </td>
+          </tr>
+        ))
+      ) : (
+        <tr>
+          <td colSpan={3}>No users</td>
+        </tr>
+      )}
     </tbody>
   </table>
 );
