@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function EditUserForm({ currentUser, updateUser, setEditing }) {
   const [user, setUser] = useState(currentUser);
+
+  useEffect(() => {
+    setUser(currentUser);
+  }, [currentUser]);
 
   function handleInputChange(event) {
     const { name, value } = event.target;

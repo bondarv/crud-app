@@ -33,7 +33,10 @@ function App() {
     );
   }
 
-  const deleteUser = id => setUsers(users.filter(user => user.id !== id));
+  function deleteUser(id) {
+    setEditing(false);
+    setUsers(users.filter(user => user.id !== id));
+  }
 
   return (
     <div className="container">
